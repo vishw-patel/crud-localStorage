@@ -1,0 +1,50 @@
+.box{
+    display: flex;
+    text-align: center;
+    background-color:  #e6f3ff;
+    
+}
+
+.grid-heading {
+    text-transform: uppercase;
+    padding: 0.5%;
+    background-color:#1a90ff;
+    color: white;
+}
+.ibox{
+    margin: auto;
+    width: 20%  ;
+    overflow: auto;
+    text-align: center;
+    
+}
+#update-button , #delete-button{
+    background-color: #4c82af; /* Green */
+  border: 1px solid #4c82af;
+  color: white;
+  padding: 8px 10px;
+  cursor: pointer;
+  width: 2% 2%;
+}
+#update-button:hover , #delete-button:hover {
+    background-color: #2f70a5 ;
+    
+} 
+.add-user-bt{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  margin-left: 13px;
+}
+.add-user-bt:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }

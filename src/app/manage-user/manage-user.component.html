@@ -1,0 +1,49 @@
+<form class="form" [formGroup]="myreactiveForm">
+    <div>
+        <div class="container">
+            <div class="label-container">
+                <label class="label" for="username">User Name</label>
+            </div>
+            <div>
+                <input class="inputs" type="text" placeholder="enter your username" name="username"
+                    formControlName="username">
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="label-container">
+                <label class="label" for="email">Email</label>
+            </div>
+            <div>
+                <input type="email" id="email" placeholder="enter your email " name="email" formControlName="email">
+                <small *ngIf="!myreactiveForm.get('email').valid && myreactiveForm.get('email').touched ">please enter
+                    valid
+                    email</small>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="label-container">
+                <label class="label" for="course">select course</label>
+            </div>
+            <div>
+                <select id="courses" name="course" formControlName="courses">
+                    <option value="Angular">Angular</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <button  class="submit-bt" type="button" (click)="onSubmit() ;addUser()">Submit</button>
+    <button class="cancel-bt" type="button" routerLink="/users">cancel</button>
+
+
+</form>

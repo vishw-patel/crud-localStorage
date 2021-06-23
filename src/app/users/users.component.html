@@ -1,0 +1,22 @@
+<button class ="add-user-bt" routerLink="/manage-user">Add User</button><br><br>
+<div>
+    <input type="email" id="search" [(ngModel)]="namesearch">
+</div>
+<div>
+    <div class="box">
+        <div class="ibox grid-heading" >ID</div>
+        <div class="ibox grid-heading">User Name</div>
+        <div class="ibox grid-heading">Email-address</div>
+        <div class="ibox grid-heading">selected course</div>
+        <div class="ibox grid-heading"> Modify  </div>
+    </div>
+    <div *ngFor="let user of users | filter:namesearch " class="box">
+        <div class="ibox ">{{user.id}}</div>
+        <div class="ibox">{{user.username}}</div>
+        <div class="ibox">{{user.email}}</div>
+        <div class="ibox">{{user.courses}}</div>
+        <div class="ibox"> <button id="update-button"  (click)="updateUser(user)"> update </button> <button  id='delete-button'(click)="deleteUser(user)"> delete </button> </div>
+    </div>
+
+    
+</div>

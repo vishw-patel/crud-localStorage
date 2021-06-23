@@ -1,0 +1,22 @@
+<h1>this is parent component</h1>
+<div>
+    <button (click)="countplusone()" >count++</button>
+    <button (click)="countminusone()"> count-- </button>
+</div>
+
+
+
+<div>
+    <h1> this is @viewchidren example... </h1>
+    <input type="text"  #trForviewchidren>
+    <input type="text"  #trForviewchidren>
+    <input type="text"  #trForviewchidren>
+    <button (click)="alertme()"> @viewchildren example </button>
+</div>
+<h3></h3>
+
+<app-child>
+    <h3 #hello>hello from parent</h3>
+    <h3 #hello>hello from </h3>
+    <h3 #hello>hello</h3>
+</app-child>

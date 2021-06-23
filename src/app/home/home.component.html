@@ -1,0 +1,89 @@
+<!-- this is app-in-out-test component for @input and @output decorator-->
+<div>
+    <app-in-out-test [loggedIn]='userLoggedIn' (newItemEvent)="testforoutput()"></app-in-out-test>
+   
+</div>
+
+
+<button routerLink="/parent">click to view parent component</button>
+    
+
+<h1> this is home </h1>
+
+<div>
+    <h3>these are custome pipes examples under</h3>
+    <h5></h5>
+    <div>Normal power: <input [(ngModel)]="power"></div>
+    <div>Boost factor: <input [(ngModel)]="factor"></div>
+    <p>
+        Super Hero Power: {{power | exponentialStrength: factor }}
+    </p>
+</div>
+<h2>these are built-in structural direvtives</h2>
+<ul>
+    <li *ngFor="let user of users ;let i=index">{{user.username}} {{i+1}}</li>
+</ul>
+<div *ngIf="currentCustomer">Hello, {{currentCustomer.name}}</div>
+<div>
+    <div>
+        <h1>{{userForPipe | welcome}} </h1>
+    </div>
+    <div>
+        {{testPipe}}
+    </div>
+    <p>Without JSON pipe:</p>
+    <pre>{{b}}</pre>
+    <p>With JSON pipe:</p>
+    <pre>{{object | json}}</pre>
+    <div>
+        <p>{{ 13.456 | number : '4.2-3' }}</p>
+        <p>{{ .25 | percent }}</p>
+        <p>{{.25 | currency :'INR'}}</p>
+        <p>{{25 | currency:'INR'}}</p>
+        <p>{{25 | currency:'CAD'}}</p>
+    </div>
+    <div>
+        {{date | date : 'short'}}<br>
+        <!--short/medium/long/full (Date|Time)-->
+        {{date | date : 'shortDate'}}<br>
+        {{date | date : 'shortTime'}}<br>
+    </div>
+</div>
+
+
+<h2>these are built-in attribut directives</h2>
+<div>
+    <input type="text" [disabled]="'true'">
+    <input type="text" [(ngModel)]="username">
+    <p>{{username}}</p>
+    <p [ngStyle]="{'color': 'red'}"> hhoihoh</p>
+</div>
+
+<h1>there are custome attribute directive</h1>
+<div>
+    <p>
+        <highlighttext>highlighttext</highlighttext>
+    </p>
+    <p appRendererHightlight>this is green </p>
+    <p appHostlis [appHostlis]="'blue'" [heighlightColor]="'orange'">this is hostlistner </p>
+</div>
+
+
+<div>
+    <h1>these are custome structural directive example</h1>
+    <div *ngIf="isavailable"> show the element when isavailable is true</div>
+    <div>is smae as</div>
+    <ng-template [ngIf]="isavailable">
+        <div>
+            show the element when isavailable is true
+        </div>
+    </ng-template>
+
+    <div *appalternateif="isavailable"> this condition enables with custom diective
+
+    </div>
+    <div>
+        <p ngNonBindable>This should not evaluate: {{ 1 + 1 }}</p>
+    </div>
+</div>
+
